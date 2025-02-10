@@ -1,0 +1,52 @@
+/* Container for the discount banner */
+.discountBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #b3cde0;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.discountLine {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3d59;
+}
+
+.discountText {
+    position: relative;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #1e3d59;
+    animation: moveText 3s ease-in-out infinite;
+}
+
+.discountText::before {
+    content: "⭐";
+    position: absolute;
+    top: -20px;
+    left: -45px;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+.discountText::after {
+    content: "⭐";
+    position: absolute;
+    top: -20px;
+    right: -45px;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}

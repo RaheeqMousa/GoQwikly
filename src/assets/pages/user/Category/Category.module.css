@@ -1,0 +1,9 @@
+.categories { 
+    margin-top: 50px;
+}
+.categories img{
+    width:150px;
+    height: auto;
+    cursor: pointer;
+}
+

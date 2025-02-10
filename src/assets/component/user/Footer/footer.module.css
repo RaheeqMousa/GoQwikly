@@ -1,0 +1,25 @@
+.footer{
+    
+    padding: 90px 0px 90px 0px;
+    background-color: black;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer p{
+    color:white;
+}
+
+.footer h5{
+    color:white;
+}
+
+
+@media (max-width: 945px) {
+    .footer {
+      flex-direction: column; 
+      gap: 10px; 
+    }
+}

@@ -1,0 +1,110 @@
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+.slide h3 {
+    color: black;
+    position: relative;
+    animation: slideDown 1s ease-in-out;
+    font-size: 45px;
+  }
+
+  .slide p {
+    color: black;
+    position: relative;
+    font-size: 26px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      top: -100px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      left: -150px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+.item{
+    position: relative;
+}
+
+.caption{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+}
+
+.caption:nth-child(2){
+    position: absolute;
+      top: 65%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+}
+
+.productDetailSlider{
+  margin-top: 150px;
+  width: 25%;
+}
+
+.slider_price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+@media (max-width: 830px) {
+
+    .slide img{
+        width: 100%;
+        height: 300px;;
+    }
+
+    .slide h3{
+        font-size: 20px;
+    }
+    .slide p{
+        font-size: 16px;
+    }
+    .productDetailSlider{
+      width: 40%;
+      gap:50px;
+      margin-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+  .slider_price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .productDetailSlider{
+    margin-top: 0;
+    gap:20px;
+    width: 50%;
+  }
+  
+}
