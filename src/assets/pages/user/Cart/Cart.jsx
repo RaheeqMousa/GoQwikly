@@ -132,7 +132,7 @@ export default function Cart() {
                     </div>
 
                     <div className='d-flex justify-content-end'>
-                        <button className='btn btn-danger' onClick={()=>clearCart()}>Empty Cart</button>
+                        <button className='btn btn-outline-danger' onClick={()=>clearCart()}>Empty Cart</button>
                     </div>
 
                     {/* Render the cart items */}

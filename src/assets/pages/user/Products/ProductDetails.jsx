@@ -24,7 +24,7 @@ export default function ProductDetails() {
     const [isLoading,setIsLoading] = useState(true);
     const [avgRating, setAvgRating] = useState(0);
     const navigate=useNavigate();
-  
+    
     const getProduct =async () => {
       try{
           const {data}=await axios.get(`https://ecommerce-node4.onrender.com/products/${productId}`);
@@ -144,15 +144,15 @@ export default function ProductDetails() {
 
         <div className={`container flex-wrap ${styles.slider_price}`}>
             <Carousel className={`${styles.productDetailSlider}`}>
-            {product.subImages.map((img, index) => (
-                <Carousel.Item key={index}>
-                <img
-                    src={img.secure_url}
-                    alt={`Product ${index}`}
-                    className="d-block w-100"
-                />
-                </Carousel.Item>
-            ))}
+                {product.subImages.map((img, index) => (
+                    <Carousel.Item key={index}>
+                    <img
+                        src={img.secure_url}
+                        alt={`Product ${index}`}
+                        className="d-block w-100"
+                    />
+                    </Carousel.Item>
+                ))}
             </Carousel>
 
             <div className='w-50'>

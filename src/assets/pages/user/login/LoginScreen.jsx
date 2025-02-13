@@ -21,7 +21,7 @@ export default function LoginScreen() {
       try{
       //send data to API
       const response = await axios.post(`https://ecommerce-node4.onrender.com/auth/signin`,value);
-      navigate('/home')
+      navigate('/products')
 
       if(response.status==200){//success alert and navigate to login
         
@@ -47,6 +47,7 @@ export default function LoginScreen() {
     }
   }
 
+
   return (
 
     <>
@@ -66,6 +67,7 @@ export default function LoginScreen() {
         {serverError && <div className='text-danger'>{serverError}</div>}
 
         <Link to='/auth/register'>Don't have an account?</Link>
+        <Link to='/auth/forgotPass' >Forgot password?</Link>
         <button type="submit"  disabled={isLoading}>{isLoading?"Loading...":"Login"}</button>
       </form>
     </div>

@@ -20,14 +20,16 @@ import UserContextProvider from './assets/component/user/context/UserContext'
 import Profile from './assets/pages/user/Profile/Profile'
 import Info from './assets/pages/user/Profile/Info'
 import Orders from './assets/pages/user/Profile/Orders'
+import ForgotPass from './assets/pages/user/ForgotPassword/ForgotPass';
+import ResetPass from './assets/pages/user/ForgotPassword/ResetPass';
 
 export default function App() {
 
   const r = createBrowserRouter(
     [
       {
-        path:'/auth',
-        element: 
+        path: '/auth',
+        element:
           <AuthProtectedRoute>
             <AuthLayout />
           </AuthProtectedRoute>,
@@ -39,8 +41,16 @@ export default function App() {
           {
             path: 'register',
             element: <RegisterScreen />
+          },
+          {
+            path: 'forgotPass',
+            element: <ForgotPass />,
+          },
+          {
+            path: 'resetPass/:userEmail',
+            element: <ResetPass />
           }
-      ]
+        ]
       },
       {
         path: '/',
@@ -49,9 +59,9 @@ export default function App() {
             <CartContextProvider>
               <ProtectedRoute>
                 <UserLayout />
-              </ProtectedRoute> 
+              </ProtectedRoute>
             </CartContextProvider>
-          </UserContextProvider>,          
+          </UserContextProvider>,
         children: [
           {
             path: 'home',

@@ -3,8 +3,12 @@ import React,{useState} from 'react'
 import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
 import Comment from "../../../pages/user/ProductComments/Comment"
+import CreateComment from "../../../pages/user/ProductComments/CreateComment"
+import { useParams } from 'react-router-dom';
 
 export default function DropDown({items,type}) {
+
+    const { productId } = useParams();
     const [isOpen,setIsOpen] = useState(false);
 
     const toggleDropDown = () =>{
@@ -33,9 +37,11 @@ export default function DropDown({items,type}) {
         ) : (
             items.length > 0 ? (
             <div className='d-flex flex-column gap-4 py-3'>
+                 <CreateComment item={productId}/>
                 {
                     items.map(comment => (
                         <div className='d-flex flex-column justify-content-center align-items-start '>
+                           
                             <Comment item={comment} />
                         </div>
                     ))
