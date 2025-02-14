@@ -1,0 +1,13 @@
+.OrderForm{
+    /* background: linear-gradient(to right, #000000,rgba(255, 255, 255, 0.5)); */
+    padding: 50px;
+    border-radius: 10px;
+    width:fit-content;
+    height: fit-content;
+}
+
+.OrderForm input{
+    width: 350px;
+    height:50px;
+    border-radius: 5px;
+}

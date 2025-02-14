@@ -131,9 +131,15 @@ export default function Cart() {
                         <p>Remove</p>
                     </div>
 
-                    <div className='d-flex justify-content-end'>
-                        <button className='btn btn-outline-danger' onClick={()=>clearCart()}>Empty Cart</button>
+                    <div className='d-flex justify-content-between px-5'>
+                        <div className='d-flex justify-content-end'>
+                            <button type="button" className='btn btn-danger' onClick={()=>clearCart()}>Empty Cart</button>
+                        </div>
+                        <div>
+                            <Link type="button" className='btn btn-primary' to={'/order'}>Order Now!</Link>
+                        </div>
                     </div>
+        
 
                     {/* Render the cart items */}
                     {cart.map((product) => (

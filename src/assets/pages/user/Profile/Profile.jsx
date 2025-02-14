@@ -15,15 +15,18 @@ export default function Profile() {
 
     const items_list = [
         {name:"Information", icon:FaInfoCircle},
-        {name:"Orders", icon:MdLocalShipping},
-        {name:"Logout", icon:CiLogout}
+        {name:"OrderDetails", icon:MdLocalShipping},
+        {name:"Logout", icon:CiLogout},
+        
     ];
     
     return (
         <>
-            <div className='d-flex flex-wrap'>
-                <SideBar items={items_list} parent={"profile"} />      
-                <Outlet  />
+            <div className='d-flex flex-wrap w-100'>
+                <SideBar items={items_list} parent={"profile"} />    
+                <div className='d-flex justify-content-center align-items-center w-75'>
+                    <Outlet />
+                </div>  
             </div>     
         </>
     )

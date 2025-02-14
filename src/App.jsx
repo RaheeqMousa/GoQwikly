@@ -22,6 +22,8 @@ import Info from './assets/pages/user/Profile/Info'
 import Orders from './assets/pages/user/Profile/Orders'
 import ForgotPass from './assets/pages/user/ForgotPassword/ForgotPass';
 import ResetPass from './assets/pages/user/ForgotPassword/ResetPass';
+import Order from './assets/pages/user/Order/Order'
+
 
 export default function App() {
 
@@ -92,6 +94,10 @@ export default function App() {
             element: <Cart />
           },
           {
+            path: 'order',
+            element: <Order />
+          },
+          {
             path: 'profile',
             element: <Profile />,
             children: [
@@ -100,7 +106,7 @@ export default function App() {
                 element: <Info />
               },
               {
-                path: 'Orders',
+                path: 'OrderDetails',
                 element: <Orders />
               }
             ]
