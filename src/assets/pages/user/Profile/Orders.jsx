@@ -7,7 +7,7 @@ import axios from 'axios'
 export default function () {
 
     const [orders, setOrders] = useState([])
-    const [details, setDetails] = useState([]);
+    
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -31,8 +31,7 @@ export default function () {
                 console.log("success");
             }
             setOrders(res.data.orders);
-            setDetails(res.data.orders.filter((_, index) => index % 2 !== 0)); 
-
+        
         } catch (e) {
             console.log("error ", e.response.data);
         } finally {
@@ -41,11 +40,11 @@ export default function () {
     };
 
 
-    if (isLoading || !details) {
+    if (isLoading ) {
         console.log("loading");
         return <Loader />;
     }
-    if (orders.length === 0 || details.length === 0) {
+    if (orders.length === 0) {
         // Handle the case when no orders or details are available
         return <p>No orders or details available.</p>;
     }
@@ -62,7 +61,7 @@ export default function () {
                     {
                         orders.filter((_, index) => index % 2 === 0).map((order, index) => (
                             <div key={index}>
-                                <DropDown type="order" items={order.products} details={details.at(++index)} />
+                                <DropDown type="order" items={order.products} details={orders.at(++index)} />
                                 {/* <h3>Order ID: {order.id}</h3>
                                 <h3>Total Price: {order.totalPrice}</h3>
                                 <h3>Payment Method: {order.paymentMethod}</h3>

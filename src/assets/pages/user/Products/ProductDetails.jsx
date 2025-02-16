@@ -24,7 +24,15 @@ export default function ProductDetails() {
     const [isLoading,setIsLoading] = useState(true);
     const [avgRating, setAvgRating] = useState(0);
     const navigate=useNavigate();
-    
+
+    useEffect(() => {
+        getProduct();
+    }, []);
+  
+    useEffect(() => {
+      getAvgRating();
+  }, []);
+  
     const getProduct =async () => {
       try{
           const {data}=await axios.get(`https://ecommerce-node4.onrender.com/products/${productId}`);
@@ -50,13 +58,7 @@ export default function ProductDetails() {
     }
 };
 
-  useEffect(() => {
-      getProduct();
-  }, []);
 
-  useEffect(() => {
-    getAvgRating();
-}, []);
 
 
 

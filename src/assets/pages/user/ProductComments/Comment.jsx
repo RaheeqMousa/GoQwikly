@@ -31,7 +31,7 @@ export default function Comment({ item }) {
 
         <div >
           <div className='d-flex gap-2'>
-            {item.createdBy.secure_url && <img src={user.image.secure_url} size={20} className='rounded' /> || <img src={defaultPic} size={20} className='rounded' />}
+            {item.createdBy.image && <img src={item.createdBy.image.secure_url} size={20} className='rounded' /> || <img src={defaultPic} size={20} className='rounded' />}
             <h4>{item.createdBy.userName}</h4>
           </div>
           <p className='fs-5'>{stars}</p>

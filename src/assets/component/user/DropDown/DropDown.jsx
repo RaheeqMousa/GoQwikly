@@ -20,7 +20,7 @@ export default function DropDown({ items, type, details }) {
     return (
         <>
             <div className='d-flex flex-column'>
-                {type==="order"?(
+                {type === "order" ? (
                     <button onClick={toggleDropDown} className='d-flex gap-2 btn btn-success px-5 py-2 fs-5'>
                         {isOpen ? (
                             <TiArrowSortedUp size={24} />
@@ -29,22 +29,22 @@ export default function DropDown({ items, type, details }) {
                         )} {
                             <div className='d-flex gap-5'>
                                 <p>{type}</p>
-                                {/* <p>{details.createdAt}</p>
-                                <p>{details.status}</p> */}
-      
-                            </div> 
+                                <p>{details.createdAt}</p>
+                                <p>{details.status}</p>
+
+                            </div>
                         }
-                    </button>):
+                    </button>) :
                     (
                         <button onClick={toggleDropDown} className='btn btn-success px-5 py-2 fs-5 w-25'>
-                            {isOpen? (
+                            {isOpen ? (
                                 <TiArrowSortedUp size={24} />
                             ) : (
                                 <TiArrowSortedDown size={24} />
                             )} {type}
                         </button>
                     )
-                    
+
                 }
 
                 {isOpen && (
@@ -74,23 +74,25 @@ export default function DropDown({ items, type, details }) {
                                 ))}
                             </div>
                         </div>
-                    ) : (
-                        // Comments Section
-                        items && items.length > 0 ? (
-                            <div className='d-flex flex-column gap-4 py-3'>
-                                <CreateComment item={productId} />
-                                {items.map(comment => (
-                                    <div key={comment.id} className='d-flex flex-column justify-content-center align-items-start'>
-                                        <Comment item={comment} />
-                                    </div>
-                                ))}
-                            </div>
-                        ) : (
-                            <div>
-                                <p>No comments yet.</p>
-                            </div>
-                        )
-                    )
+                    ) :
+                        <>
+                            {/* Comments Section */}
+                            <CreateComment item={productId} />
+
+                            {items && items.length > 0 ? (
+                                <div className='d-flex flex-column gap-4 py-3'>
+                                    {items.map(comment => (
+                                        <div key={comment.id} className='d-flex flex-column justify-content-center align-items-start'>
+                                            <Comment item={comment} />
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div>
+                                    <p>No comments yet.</p>
+                                </div>
+                            )}
+                        </>
                 )}
 
 

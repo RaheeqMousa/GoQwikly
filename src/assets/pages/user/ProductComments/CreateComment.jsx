@@ -30,9 +30,9 @@ export default function CreateComment({ item }) {
           }
         }
       );
-      console.log('Review submitted:', response.data);
+      console.log('Review submitted:', response);
     } catch (err) {
-      setError(err.message);
+      setError("You have already added a review");
     } finally {
       setLoading(false);
     }
@@ -44,7 +44,7 @@ export default function CreateComment({ item }) {
         onSubmit={handleSubmit(submitReview)}
         className={`w-75 border rounded px-2 py-3 ${style.commentBox} d-flex justify-content-center align-items-start flex-column gap-3`}
       >
-        {error && <p className="text-red">{error}</p>}
+        {error && <p className="text-danger fw-bold">{error}</p>}
         <div className="d-flex gap-2">
           {user.image.secure_url ? (
             <img src={user.image.secure_url} alt="user" size={20} className="rounded" />
