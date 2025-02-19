@@ -14,6 +14,7 @@ export default function CreateComment({ item }) {
   const [error, setError] = useState(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  console.log(item);
   const submitReview = async (data) => {
     // Validation is handled by react-hook-form, no need to manually check if comment is empty
     setLoading(true);
@@ -32,7 +33,8 @@ export default function CreateComment({ item }) {
       );
       console.log('Review submitted:', response);
     } catch (err) {
-      setError("You have already added a review");
+      console.log(err)
+      //setError("You have already added a review");
     } finally {
       setLoading(false);
     }
@@ -71,6 +73,7 @@ export default function CreateComment({ item }) {
             type="number"
             min={0}
             max={5}
+            step={0.5}
             id="rating"
             className="rounded"
             {...register("rating", { required: "Rating is required" })}

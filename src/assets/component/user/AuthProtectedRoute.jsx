@@ -6,7 +6,7 @@ export default function ProtectedRoute({children}) {
 
     if(userToken){
         console.log("already logged in");
-       return <Navigate to='/products'/>
+       return <Navigate to='/profile/Information'/>
     }
 
   return children 

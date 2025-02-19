@@ -23,9 +23,9 @@ export default function DropDown({ items, type, details }) {
                 {type === "order" ? (
                     <button onClick={toggleDropDown} className='d-flex gap-2 btn btn-success px-5 py-2 fs-5'>
                         {isOpen ? (
-                            <TiArrowSortedUp size={24} />
-                        ) : (
                             <TiArrowSortedDown size={24} />
+                        ) : (
+                            <TiArrowSortedUp size={24} />
                         )} {
                             <div className='d-flex gap-5'>
                                 <p>{type}</p>
@@ -38,9 +38,9 @@ export default function DropDown({ items, type, details }) {
                     (
                         <button onClick={toggleDropDown} className='btn btn-success px-5 py-2 fs-5 w-25'>
                             {isOpen ? (
-                                <TiArrowSortedUp size={24} />
-                            ) : (
                                 <TiArrowSortedDown size={24} />
+                            ) : (
+                                <TiArrowSortedUp size={24} />
                             )} {type}
                         </button>
                     )

@@ -64,7 +64,7 @@ export default function RegisterPage() {
   return (
     <>
       <div className={`d-flex justify-content-center align-items-center vh-100 ${styles.back}`} >
-        <form onSubmit={handleSubmit(registerUser)} className={`d-flex  justify-content-center align-items-center flex-column gap-4 py-5 ${styles.signUp}`}>
+        <form onSubmit={handleSubmit(registerUser)} className={`d-flex  justify-content-center align-items-center flex-column gap-4 py-5 ${styles.signUp} ${styles.registerForm}`}>
           <h2>SignUp</h2>
           <div>
             <input type="text" placeholder="Enter username" 

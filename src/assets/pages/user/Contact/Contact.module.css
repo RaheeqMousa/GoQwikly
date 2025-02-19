@@ -1,0 +1,31 @@
+img{
+    width: 80%;
+    height: auto;
+}
+
+.contact{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.contactForm input {
+    width: 250px;
+    height:50px;
+    border-radius: 5px;
+}
+
+.contactForm{
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5));
+    padding: 50px;
+    border-radius: 10px;
+    width:fit-content;
+    height: fit-content;
+}
+
+@media (max-width: 968px) {
+
+    .contact{
+        margin-top: 20px;
+    }
+    
+}
