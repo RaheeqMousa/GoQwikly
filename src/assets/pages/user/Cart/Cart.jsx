@@ -14,6 +14,9 @@ export default function Cart() {
     const [isLoading,setLoading]=useState(true);
     const [error, setError] = useState(null); // Handle errors
 
+    useEffect(()=>{
+        getCart();
+    },[])
 
     const getCart=async ()=>{
         try{
@@ -104,9 +107,6 @@ export default function Cart() {
         }
     }
 
-    useEffect(()=>{
-        getCart();
-    },[])
 
     if(isLoading)
         return <Loader />; // Display loading spinner while waiting for data.

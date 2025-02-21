@@ -23,6 +23,7 @@ import Orders from './assets/pages/user/Profile/Orders'
 import ForgotPass from './assets/pages/user/ForgotPassword/ForgotPass';
 import ResetPass from './assets/pages/user/ForgotPassword/ResetPass';
 import Order from './assets/pages/user/Order/Order'
+import SearchPage from './assets/pages/user/SearchPage/SearchPage'
 
 
 export default function App() {
@@ -72,6 +73,10 @@ export default function App() {
           {
             path: '/',
             element: <Home />
+          },
+          {
+            path:'search/:item_name',
+            element: <SearchPage />
           },
           {
             path: 'contact',

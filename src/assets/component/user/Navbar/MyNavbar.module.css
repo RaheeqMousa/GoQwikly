@@ -12,7 +12,24 @@
     margin-bottom: 100px;
 }
 
+.navbarIcons{
+    color: black;
+    font-size: 1.25rem;
+    cursor:pointer;
+}
 
+.searchInput{
+    width: 220px;
+    height:30px;
+    border-radius: 5px;
+}
+
+.searchButton{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    padding: 3px 6px;
+}
 
 @media (max-width: 981px) {
     .nav{

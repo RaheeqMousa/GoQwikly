@@ -7,6 +7,7 @@ import OrderForm from './OrderForm';
 export default function Order() {
     const { cartItems } = useContext(CartContext);
 
+    
     console.log("Cart Context Data in Component:", { cartItems });
 
     return (

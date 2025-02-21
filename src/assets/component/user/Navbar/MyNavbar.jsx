@@ -1,4 +1,4 @@
-import React, { useContext, useEffect} from 'react'
+import React, { useContext, useEffect, useState} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,14 +9,32 @@ import { FaCartShopping } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import style from './MyNavbar.module.css'
 import {CartContext} from '../context/CartContext'
+import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 export default function MyNavbar() {
 
   const {cartCount,setCartCount} = useContext(CartContext);
-
+  const [isInputVisible, setIsInputVisible] = useState(false);
   useEffect(() =>{
     setCartCount(0);
   },[])
+
+  const toggleSearch=()=>{
+    setIsInputVisible(!isInputVisible);
+  }
+
+  const navigate=useNavigate();
+  const handleSearch=()=>{
+    setIsInputVisible(false);
+    navigate(`/search/${event.target.value}`);
+  }
+
+  const handleKeyPress=(event)=>{
+    if(event.key === 'Enter'){
+      handleSearch();
+    }
+  }
 
   return (
     <div>
@@ -32,12 +50,23 @@ export default function MyNavbar() {
             </Nav>
         </Navbar.Collapse>
 
+
         <div className="d-flex align-items-center gap-3">
+
+            <div className='d-flex align-items-center gap-2'>
+              {isInputVisible &&
+                <div>
+                  <input type="text" placeholder='Search' className={`fs-5 ${style.searchInput}`} onKeyDown={handleKeyPress} />
+                </div>          
+              }
+              <FaSearch className={`${style.navbarIcons}`} onClick={toggleSearch} />
+            </div>
+            
             <Nav.Link to={'/cart'} as={Link}>
-              <FaCartShopping style={{ color: 'black', fontSize: '1.25rem' }} />{cartCount}
+              <FaCartShopping className={`${style.navbarIcons}`}/>{cartCount}
             </Nav.Link>
             <Nav.Link to={'/profile'} as={Link}>
-              <FaUser style={{ color: 'black', fontSize: '1.25rem' }} />
+              <FaUser className={`${style.navbarIcons}`} />
             </Nav.Link>
             <Nav.Link to={'/auth/login'} as={Link}>
              login
@@ -45,8 +74,8 @@ export default function MyNavbar() {
             <Nav.Link as={Link} to={'/auth/register'}>
               register
             </Nav.Link>
-            
-          </div>
+        </div>
+
         </Container>
     </Navbar>
   </div>

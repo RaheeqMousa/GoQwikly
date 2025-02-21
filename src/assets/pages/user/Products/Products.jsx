@@ -37,7 +37,7 @@ if(isLoading)
         <Slider />
         <DiscountLine />
         <Category />
-        <div className={`container ${style.products}`}>
+        <div className={`container ${style.products} mb-5`}>
           <div  className="d-flex justify-content-center align-items-center flex-wrap gap-5">
               {
                 products.map(
