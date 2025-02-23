@@ -40,7 +40,7 @@ export default function SearchPage() {
 
             <div className={`container ${style.products} mb-5`} >
                 <div className="d-flex justify-content-center align-items-center flex-wrap gap-5">
-                    {
+                    {products.length != 0 ? (
                         products.map(
                             (product, index) =>
                                 <div key={index} className={`${style.product}`}>
@@ -53,7 +53,13 @@ export default function SearchPage() {
                                         </div>
                                     </Link>
                                 </div>
-                        )
+                        )) :
+                        <div className='d-flex align-items-center flex-column'>
+                            <h3 className='py-5'>No products found</h3>
+                            <Link to='/products'>
+                                <button className='py-2 px-3 fs-5'>Return to shop</button>
+                            </Link>
+                        </div>
                     }
                 </div >
             </div >

@@ -27,17 +27,13 @@
 }
 
 @media (max-width: 980px) {
-
     .cart{
         margin-top: 0;
-    }
-    
+    } 
 }
 
 @media (max-width: 600px) {
-
     .cartRow{
         flex-wrap: wrap;
-    }
-    
+    }   
 }

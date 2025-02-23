@@ -1,8 +1,8 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.5));
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.5));
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -12,31 +12,32 @@
     margin-bottom: 100px;
 }
 
-.navbarIcons{
+.navbarIcons {
     color: black;
     font-size: 1.25rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.searchInput{
+.searchInput {
     width: 220px;
-    height:30px;
+    height: 30px;
     border-radius: 5px;
 }
 
-.searchButton{
+.searchButton {
     height: 30px;
     width: 100px;
     border-radius: 5px;
     padding: 3px 6px;
 }
+  
 
 @media (max-width: 981px) {
-    .nav{
+    .nav {
         background-color: white;
         height: fit-content;
         position: sticky;
         margin-bottom: 0px;
     }
-    
+
 }

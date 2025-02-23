@@ -48,7 +48,7 @@ export default function Category() {
                                 <div className='d-flex justify-content-center align-items-center'>
                                     <SwiperSlide>
                                         <Link to={`/CategoryProduct/${cat._id}`}>
-                                            <img src={cat.image.secure_url} alt="Category" />  
+                                            <img src={cat.image.secure_url} alt="Category"  />  
                                         </Link>
                                     </SwiperSlide>
                                 </div>

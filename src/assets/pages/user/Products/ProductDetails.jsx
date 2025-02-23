@@ -139,7 +139,7 @@ export default function ProductDetails() {
     }
   }
   
-
+  
   return (
    <>
     <section className={`${style.productDetail}`}>

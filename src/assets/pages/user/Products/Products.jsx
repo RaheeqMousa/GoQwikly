@@ -45,7 +45,7 @@ if(isLoading)
                     <div key={index} className={`${style.product}`}>
                       <Link to={`/products/${product._id}`}>
                         <div className={`d-flex align-items-center justify-content-center flex-column`}>
-                          <img src={product.mainImage.secure_url} className={`${style.cardImg} `} alt={product.name} />
+                          <img src={product.mainImage.secure_url} className={`${style.cardImg}`} alt={product.name} />
                         </div>
                         <div className='w-100 overflow-auto'>
                           <p >{product.name}</p>

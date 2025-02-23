@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import defaultPic from './defaultPicture.jpg';
 import { UserContext } from '../../../component/user/context/UserContext'
+import style from './Profile.module.css'
 
 export default function Image() {
 
@@ -28,11 +29,6 @@ export default function Image() {
         formData.forEach((value) => {
             console.log(value + ': image');
         })
-
-        // if(!data.image[0]){
-        //     alert('Please select an image');
-        //     return;
-        // }
 
         try {
             const res = await axios.put("https://ecommerce-node4.onrender.com/user/update-image",
@@ -72,14 +68,14 @@ export default function Image() {
 
     return (
         <>
-            <Form className='d-flex flex-column gap-2' encType='multipart/form-data' onSubmit={handleSubmit(updateImage)}>
+            <Form className='d-flex flex-column gap-3' encType='multipart/form-data' onSubmit={handleSubmit(updateImage)}>
 
                 <div className='d-flex justify-content-center'>
-                    <BootstrapImage src={preview} width={200} height={200} className='border shadow-sm rounded-circle' alt="Profile Preview" />
+                    <BootstrapImage src={preview} className='border shadow-sm rounded-circle w-50 img-fluid' alt="Profile Preview" />
                 </div>
 
                 <Form.Group controlId='updateImage'>
-                    <Form.Label>
+                    <Form.Label className='d-flex align-items-center'>
                         <Form.Control type="file" {...register('image', { required: "image is required" })} onChange={handleImageChange}></Form.Control>
                         {errors.image && <div className='text-danger'>{errors.image?.message}</div>}
                     </Form.Label>

@@ -30,6 +30,13 @@
     margin: 100px 0px;
 }
 
+.products button{
+    background-color: black;
+    color:white;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
 @media (max-width: 500px) {
     .products .product{
         padding:0px;

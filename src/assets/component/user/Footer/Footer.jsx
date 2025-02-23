@@ -17,10 +17,10 @@ export default function Footer() {
                 <Link to="/Home">products</Link>
                 </div>                
             </div>
-            <div className="d-flex justify-content-between gap-3">
+            <div className="d-flex flex-wrap justify-content-between gap-3">
                 <p>Copyright © 2025 raheeqmousa99@gmail.com. All rights reserved</p>
                 <a href="#">Privacy Policy</a>
-                <div className="d-flex d-grid gap-3 fs-4">
+                <div className="d-flex flex-wrap d-grid gap-3 fs-4">
                 <a href="https://www.facebook.com/raheeqm.mousa" target="_blank"><FaFacebook color='white'/></a>
                 <a href="https://www.facebook.com/raheeqm.mousa" target="_blank"><FaInstagram color='white'/></a>
                 <a href="https://www.linkedin.com/in/raheeq-mousa-b960b7291/" target="_blank"><FaLinkedin color='white'/></a>                  
