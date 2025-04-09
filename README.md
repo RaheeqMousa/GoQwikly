@@ -14,7 +14,7 @@ This is a simple e-commerce website built with React. It provides a user-friendl
 - **Cart Management**: Users can view, update, and remove products from their cart.
 - **Checkout**: Users can proceed an order.
 - **User Authentication**: Login and signup functionality with protected routes.
-- **Protected Routes**: Certain pages are accessible only to authenticated users (e.g., profile, checkout).
+- **Protected Routes**: Certain pages are accessible only to authenticated users (profile, cart, etc).
 - **Responsive Design**: The website adjusts its layout to fit any screen size.
 
 ## Technologies Used
