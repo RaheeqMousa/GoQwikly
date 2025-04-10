@@ -25,3 +25,4 @@ This is a simple e-commerce website built with React. It provides a user-friendl
 - **Styled Components or CSS Modules**: For styling the components.
 - **Bootstrap**: For responsive layout and pre-styled components.
 - **React Hook Form**: For managing form inputs (checkout form).
+- **Local Storage**: Used exclusively for managing login sessions by storing authentication data in the browser.
