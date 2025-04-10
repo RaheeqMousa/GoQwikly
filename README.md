@@ -2,7 +2,7 @@
 This is a simple e-commerce website built with React. It provides a user-friendly interface to browse products, add them to a cart and proceed order. The website is designed to be responsive and functional on both desktop and mobile devices.
 
 # Live Demo
-[View GoQwikly App]:(https://goqwikly.onrender.com)
+[View GoQwikly App](https://goqwikly.onrender.com)
 
 ## Features
 
