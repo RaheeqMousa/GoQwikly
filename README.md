@@ -1,6 +1,10 @@
 # React E-Commerce Website
 This is a simple e-commerce website built with React. It provides a user-friendly interface to browse products, add them to a cart and proceed order. The website is designed to be responsive and functional on both desktop and mobile devices.
 
+# Project Demo
+[Watch Full Video Demo](https://drive.google.com/file/d/1yBmtqvSSdrDd53m5w0gubuOvgxO-g7pl/view?usp=drive_link)
+*(Recommended: Watch this if the live demo is unavailable due to API downtime)*  
+
 # Live Demo
 [View GoQwikly App](https://goqwikly.onrender.com)
 
